@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: sans-serif; */
+}
+
+body {
+    /* background: #e6e7e3; */
+    background: #252839;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    border-color: white;
+    border-top: yellowgreen;
+    border-right: green;
+    border-left: yellow;
+    border-bottom: greenyellow;
+    border-style: double;
+    border-width: 10px;
+    border-collapse: separate;
+    margin: 40px;
+}
+
+.main {
+    display: flex;
+    row-gap: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    /* transform: translate(50%); */
+    width: fit-content;
+    margin-top: 5%;
+    /* display: flex; */
+    text-align: center;
+    /* position: relative; */
+    /* right: 50%; */
+}
+
+.title h1{
+    font-family: 'Tilt Prism', cursive;
+    /* font-weight: 600; */
+    font-size: 4vw;
+    position: relative;
+    color: #252839;
+    -webkit-text-stroke: 0.3vw #383d52;
+}
+
+.title h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    /* color: #01fe87; */
+    color: whitesmoke;
+    -webkit-text-stroke: 0vw #ebd937;
+    border-right: 2px solid whitesmoke;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+    0%,10%,100%{
+        width: 0;
+    }
+
+    70%,90%{
+        width:100% ;
+    }
+}
+
+.img-gallery {
+    width: 80%;
+    margin: 100px auto 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 30px;
+}
+
+.size {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+}
+.img-gallery .size img,video{
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    transform: scale(0.8) rotate(-15deg);
+    border-radius: 20px;
+    box-shadow: 0 32px 75px rgba( 68, 77, 136, 0.4);
+}
+
+
+.overlay{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    background: black;
+    cursor: pointer;
+}
+
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: verdana;
+    text-align: center;
+}
+
+.img-gallery .size img:hover, .img-gallery .size video:hover {
+    opacity: 0.6;
+    transform: scale(1.2) rotate(0deg);
+    cursor: pointer;
+    padding: 50px;
+    box-shadow: 0 32px 75px rgba( 68, 77, 136, 1);
+}
+
+.size:hover .overlay{
+    opacity: 0.8;
+}
+
+/* ///////////////////////////////// */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+
+
+.container {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.button {
+  position: relative;
+  padding: 16px 30px;
+  font-size: 1.5rem;
+  color: var(--color);
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  text-shadow: 0 0 15px var(--color);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.button:hover {
+  color: #fff;
+  border: 2px solid rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0px var(--color);
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color);
+  z-index: -1;
+  transform: scale(0);
+  transition: 0.5s;
+}
+
+.button:hover::before {
+  transform: scale(1);
+  transition-delay: 0.5s;
+  box-shadow: 0 0 10px var(--color),
+    0 0 30px var(--color),
+    0 0 60px var(--color);
+}
+
+.button span {
+  position: absolute;
+  background: var(--color);
+  pointer-events: none;
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--color),
+    0 0 20px var(--color),
+    0 0 30px var(--color),
+    0 0 50px var(--color),
+    0 0 100px var(--color);
+  transition: 0.5s ease-in-out;
+  transition-delay: 0.25s;
+}
+
+.button:hover span {
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+.button span:nth-child(1),
+.button span:nth-child(3) {
+  width: 40px;
+  height: 4px;
+}
+
+.button:hover span:nth-child(1),
+.button:hover span:nth-child(3) {
+  transform: translateX(0);
+}
+
+.button span:nth-child(2),
+.button span:nth-child(4) {
+  width: 4px;
+  height: 40px;
+}
+
+.button:hover span:nth-child(1),
+.button:hover span:nth-child(3) {
+  transform: translateY(0);
+}
+
+.button span:nth-child(1) {
+  top: calc(50% - 2px);
+  left: -50px;
+  transform-origin: left;
+}
+
+.button:hover span:nth-child(1) {
+  left: 50%;
+}
+
+.button span:nth-child(3) {
+  top: calc(50% - 2px);
+  right: -50px;
+  transform-origin: right;
+}
+
+.button:hover span:nth-child(3) {
+  right: 50%;
+}
+
+.button span:nth-child(2) {
+  left: calc(50% - 2px);
+  top: -50px;
+  transform-origin: top;
+}
+
+.button:hover span:nth-child(2) {
+  top: 50%;
+}
+
+.button span:nth-child(4) {
+  left: calc(50% - 2px);
+  bottom: -50px;
+  transform-origin: bottom;
+}
+
+.button:hover span:nth-child(4 ) {
+  bottom: 50%;
+}
+
+.full-img{
+  
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.full-img{
+  
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.full-img video{
+  display: block;
+  width: 90%;
+  max-width: 500px;
+  transform: scale(1.2) rotate(0deg);
+}
+
+.full-img img{
+  display: block;
+  width: 90%;
+  max-width: 500px;
+  transform: scale(1.2) rotate(0deg);
+}
+
+.full-img span{
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 30px;
+  font-family: sans-serif;
+  color: white;
+  cursor: pointer;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <div class="main">
+        
+        <div class="title">
+            <h1 data-text="HAPPY_BIRTHDAY_TO_YOU_!!!">HAPPY_BIRTHDAY_TO_YOU_!!!</h1>
+        </div>
+        
+        <div class="img-gallery">
+            <div class="size">
+                <video src="/images/happy-birthday.mp4" autoplay loop alt="" onclick="openFullVid(this.src)"></video>
+                <div class="overlay">
+                    <div class="content">
+                        <h2>hello</h2>
+                        <p>Happy birthday to you</p>
+                    </div> 
+                </div>
+            </div>
+            <div class="size">
+                <img src="/images/pic1.jpg" alt="" onclick="openFullImg(this.src)">
+                <div class="overlay">
+                    <div class="content">
+                        <h2>hello</h2>
+                        <p>Happy birthday to you</p>
+                    </div>
+                </div>
+            </div>
+            <div class="size">
+                <video src="/images/cupcakes-dessert.mp4" autoplay loop alt="" onclick="openFullVid(this.src)"></video>
+                <div class="overlay">
+                    <div class="content">
+                        <h2>hello</h2>
+                        <p>Here is the cup cake I promised 😁</p>
+                    </div>
+                </div>    
+            </div>
+            <div class="size">
+                <img src="/images/pic4.jpg" alt="" onclick="openFullImg(this.src)">
+                <div class="overlay">
+                    <div class="content">
+                        <h2>hello</h2>
+                        <p>Happy birthday to you</p>
+                    </div>
+                </div>
+            </div>
+            <div class="size">
+                <img src="/images/20230602_153414.jpg" alt="" onclick="openFullImg(this.src)">
+                <div class="overlay">
+                    <div class="content">
+                        <h2>hello</h2>
+                        <p>Happy birthday to you</p>
+                    </div>
+                </div>
+            </div>
+            <div class="size">
+                <img src="/images/pic6.jpg" alt="" onclick="openFullImg(this.src)">
+                <div class="overlay">
+                    <div class="content">
+                        <h2>hello</h2>
+                        <p>Happy birthday to you</p>
+                    </div>
+                </div>
+            </div>
+            <div class="size">
+                <img src="/images/pic7.jpg" alt="" onclick="openFullImg(this.src)">
+                <div class="overlay">
+                    <div class="content">
+                        <h2>hello</h2>
+                        <p>Happy birthday to you</p>
+                    </div>
+                </div>
+            </div>
+            <div class="size">
+                <img src="/images/pic8.jpg" alt="" onclick="openFullImg(this.src)">
+                <div class="overlay">
+                    <div class="content">
+                        <h2>hello</h2>
+                        <p>Happy birthday to you</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="container">
+            <a class="button" href="nextpage.html" style="--color:#66ac0c;">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              CLICK HERE ✌️
+            </a>
+        </div>
+        
+        <div class="full-img" id="fullImgBox">
+            <video src="/images/happy-birthday.mp4" autoplay loop id="fullVid"></video>
+            <img src="/images/pic1.jpg" id="fullImg">
+            <span onclick="closeFullImg()">X</span>
+        </div>
+        <audio src="/images/SpeakLife.mp3" autoplay loop="true"></audio>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
