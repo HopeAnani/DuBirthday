@@ -171,7 +171,7 @@ body {
 .button:hover {
   color: #fff;
   border: 2px solid rgba(0, 0, 0, 0);
-  box-shadow: 0 0 0px rgba( 68, 77, 136, 1);
+  box-shadow: 0 0 0px var(--color);
 }
 
 .button::before {

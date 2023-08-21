@@ -20,4 +20,3 @@ function openFullVid(vid){
 function closeFullImg(){
     fullImgBox.style.display = "none";
 }
-
