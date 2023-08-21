@@ -20,3 +20,10 @@ function openFullVid(vid){
 function closeFullImg(){
     fullImgBox.style.display = "none";
 }
+
+let myAudio = new Audio();
+function playAudio(){
+  myAudio.src = '/images/SpeakLife.mp3';
+  myAudio.autoplay = true;
+  myAudio.loop = true;
+}
