@@ -1,5 +1,7 @@
 body {
-    background-image: linear-gradient(#fff,#bbb);
+    /* background-image: linear-gradient(#fff,#bbb); */
+    background-image: linear-gradient(#873333,#7d5e34,#0d131af5);
+    color: ghostwhite;
     height: 100vh;
     display: flex;
     justify-content: center;
