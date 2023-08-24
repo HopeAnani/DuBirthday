@@ -15,7 +15,7 @@ function openFullVid(vid){
     fullImg.style.display = "none";
     fullVid.style.display = "block";
     fullVid.src = vid;
-    // fullVid.muted = true;
+    fullVid.muted = false;
 }
 
 function closeFullImg(){

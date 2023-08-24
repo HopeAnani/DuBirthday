@@ -31,7 +31,7 @@ img{
     justify-content: center;
     align-items: center;
     perspective: 100em;
-    margin: 150px 20px;
+    margin: 150px 50px;
     box-shadow: 30px 40px 40px rgba(0, 0, 0, 0.2);
 }
 
@@ -97,14 +97,10 @@ h3{
   box-sizing: border-box;
 }
 
-html,
-body {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
 
 body {
+  /* height: 100%; */
+  /* width: 100%; */
   /* min-height: 100vh;
   display: flex;
   justify-content: center;
