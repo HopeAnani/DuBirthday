@@ -16,11 +16,13 @@ function openFullVid(vid){
     fullVid.style.display = "block";
     fullVid.src = vid;
     fullVid.muted = false;
+    fullVid.loop = false;
 }
 
 function closeFullImg(){
     fullImgBox.style.display = "none";
     fullVid.muted = true;
+    fullVid.loop = true;
 }
 
 let myAudio = new Audio();
