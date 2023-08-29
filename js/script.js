@@ -27,7 +27,7 @@ function closeFullImg(){
 
 let myAudio = new Audio();
 function playAudio(){
-  myAudio.src = '/images/SpeakLife.mp3';
+  myAudio.src = '/images/Goodness.mp3';
   myAudio.autoplay = true;
   myAudio.loop = true;
 }
